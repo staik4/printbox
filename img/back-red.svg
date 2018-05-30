@@ -1,0 +1,33 @@
+<svg id="Group_119" data-name="Group 119" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="232 -109.59 901.5 1037.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #ff001f;
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        filter: url(#Path_277);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.745" y1="0.132" x2="0.546" y2="1.05" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff001f" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ff001f" stop-opacity="0.031"/>
+    </linearGradient>
+    <filter id="Path_277" x="641" y="760.326" width="84.192" height="88.477" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#ff001f" flood-opacity="0.553"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Path_274" data-name="Path 274" class="cls-1" d="M450.559,1037.291a141.185,141.185,0,0,1-59.565-13.364h0L81.712,879.595A141.026,141.026,0,0,1,0,751.682V285.468A141.442,141.442,0,0,1,81.712,157.555L390.994,13.223a142.12,142.12,0,0,1,119.513,0L819.788,157.555c49.638,23.292,81.712,73.311,81.712,127.913v466.6a141.442,141.442,0,0,1-81.712,127.913L510.506,1024.308A143.736,143.736,0,0,1,450.559,1037.291ZM445.6,906.323a10.516,10.516,0,0,0,9.546,0L764.423,761.991a11.253,11.253,0,0,0,6.491-10.309V285.468a11.5,11.5,0,0,0-6.491-10.309L455.141,130.827a10.516,10.516,0,0,0-9.546,0L136.313,275.158a11.253,11.253,0,0,0-6.491,10.309v466.6a11.5,11.5,0,0,0,6.491,10.309Z" transform="translate(232 -109.64)"/>
+  <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="Path_277-2" data-name="Path 277" class="cls-2" d="M11.083,28.276,1.378,23.747A2.381,2.381,0,0,1,0,21.578V6.948A2.381,2.381,0,0,1,1.378,4.779L11.083.25a2.394,2.394,0,0,1,2.025,0l9.706,4.529a2.407,2.407,0,0,1,1.378,2.169V21.59a2.394,2.394,0,0,1-1.378,2.169l-9.706,4.529A2.438,2.438,0,0,1,11.083,28.276Z" transform="translate(671 780.3)"/>
+  </g>
+</svg>
