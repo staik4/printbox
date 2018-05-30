@@ -21,21 +21,7 @@
 	<script src="js/rotate/jquery.ui.rotatable.js"></script>
 	<link rel="stylesheet" href="js/rotate/jquery.ui.rotatable.css">
 	<!-- <script type="text/javascript"> -->
-	<script>
-	  $(document).ready(function(){
 
-
-	    // .on("click", function(e){
-	    // 	e.preventDefault();
-
-	    //     console.log($(this), "this");
-	    //     $('html, body').stop().animate({
-	    //         scrollTop: $(anchor.attr('href')).offset().top
-	    //     }, 777);
-
-	    // });
-	});
-</script>
 	<script src="js/main.js"></script>
 </head>
 <body>
