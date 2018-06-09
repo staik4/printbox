@@ -61,7 +61,7 @@
 
 
 //$mail_to = "staik4@yandex.ru";
-$mail_to = "printboxperm@yandex.ru";
+$mail_to = "staik4@yandex.ru";
 $thm = "Заказ";
 $msg = "Размер нанесения: ".$sizeApplication."<br>"."Размер изделия : ".$sizeProduct."<br>"."Количество: ".$qual."<br>"."Упаковка: ".$packing."<br>"."Телефон: ".$telOrder."<br>"."ФИО :".$nameOrder."<br>".$emailOrder."<br>"."Оплата: ".$payment."<br>"."Доставка: ".$delivery;
 $picture  = $file;
@@ -92,7 +92,7 @@ function send_mail($to, $thm, $html, $path, $path2, $path3)
 
 		//echo $body;
 
-		$attachments = array($path, $path2);
+		$attachments = array($path, $path2, $path3);
 
 
 		// var_dump($attachments);
