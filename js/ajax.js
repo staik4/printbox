@@ -153,11 +153,12 @@ $(document).ready(function(){
 	 });
 	 let packImg = "";
 	 $('#place-your-order-btn').on('click', function(){
-		html2canvas(document.querySelector('#packing')).then(function(canvas) {
-			document.body.appendChild(canvas);
-			dataUrlPackImg = canvas.toDataURL();
-			console.log("img_pack", dataUrlPackImg);
-		});
+		 console.log('click_button');
+			html2canvas(document.querySelector('#packing')).then(function(canvas) {
+				document.body.appendChild(canvas);
+				dataUrlPackImg = canvas.toDataURL();
+				console.log("img_pack", dataUrlPackImg);
+			});
 	 });
 
 
