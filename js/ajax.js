@@ -143,7 +143,6 @@ $(document).ready(function(){
 				});
 			}
 			var file = document.querySelector('#imgInput').files[0];
-			console.log(file);
 			file = getBase64(file);
 			file.then(function(result){
 				console.log("result",result);
@@ -153,18 +152,19 @@ $(document).ready(function(){
 	 });
 	 let packImg = "";
 	 $('#place-your-order-btn').on('click', function(){
+
 		 console.log('click_button');
 			html2canvas(document.querySelector('#packing')).then(function(canvas) {
 				document.body.appendChild(canvas);
 				dataUrlPackImg = canvas.toDataURL();
-				console.log("img_pack", dataUrlPackImg);
+				//console.log("img_pack", dataUrlPackImg);
 			});
 	 });
 
 
 	$("#place-order").click(function(e) {
 
-		console.log("#place-order");
+		//console.log("#place-order");
 		e.preventDefault();
 		let sizeApplication = $(".radio-size-span.active-radio").parent().text();
 		let sizeProduct = $(".sizes .choice-size").text();
@@ -175,11 +175,12 @@ $(document).ready(function(){
 		let emailOrder = $("#email-order").val();
 		let payment = $(".payment label .active-radio").parent().text();
 		let delivery = $(".delivery label .active-radio").parent().text();
+		let priceOrder = $('.text-price-order').text();
 
 		if(telOrder == "" || nameOrder == "" || emailOrder ==""){
 			alert("Пожалуйста заполните необходимые поля: Имя, телефонный номер, email!");
 		} else {
-
+			console.log('downImg', downImg);
 			html2canvas(document.querySelector('#result')).then(function(canvas) {
 			    document.body.appendChild(canvas);
 			    var dataURL = canvas.toDataURL();
