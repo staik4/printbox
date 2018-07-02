@@ -5,8 +5,8 @@
 	$data = str_replace(' ', '+', $data);
 
 	$data = base64_decode($data);
-	$file = "images/" . uniqid() . '.png';
-	$success = file_put_contents($file, $data);
+	$file_main_img = "images/main_img" . uniqid() . '.png';
+	$success = file_put_contents($file_main_img, $data);
 
 	$sizeApplication = $_POST['sizeApplication'];
 	$sizeProduct = $_POST['sizeProduct'];
@@ -17,22 +17,23 @@
 	$emailOrder = $_POST['emailOrder'];
 	$payment = $_POST['payment'];
 	$delivery = $_POST['delivery'];
-	$packImg = $_POST['dataUrlPackImg'];
+	$packImg = $_POST['pack'];
+	//echo $packImg;
 	$downImg = $_POST['downImg'];
 	// echo $downImg;
 	$downImg = str_replace('data:image/jpeg;base64,', '', $downImg);
 	$downImg = str_replace(' ', '+', $downImg);
 
 	$downImg = base64_decode($downImg);
-	$file1 = "images/downimg" . uniqid() . '.png';
-	$successs = file_put_contents($file1, $downImg);
+	$file_down_img = "images/down_img" . uniqid() . '.png';
+	$successs = file_put_contents($file_down_img, $downImg);
 
-	$downImgPack = str_replace('data:image/jpeg;base64,', '', $downImgPack);
-	$downImgPack = str_replace(' ', '+', $downImgPack);
+	$packImg = str_replace('data:image/png;base64,', '', $packImg);
+	$packImg = str_replace(' ', '+', $packImg);
 
-	$downImgPack = base64_decode($downImgPack);
-	$file1 = "images/downimg" . uniqid() . '.png';
-	$successs_packImg = file_put_contents($file2, $downImgPack);
+	$packImg = base64_decode($packImg);
+	$file_pack_img = "images/pack_img" . uniqid() . '.png';
+	$successs_packImg = file_put_contents($file_pack_img, $packImg);
 	// echo $data1;
 	// echo $file1;
 
@@ -64,9 +65,9 @@
 $mail_to = "staik4@yandex.ru";
 $thm = "Заказ";
 $msg = "Размер нанесения: ".$sizeApplication."<br>"."Размер изделия : ".$sizeProduct."<br>"."Количество: ".$qual."<br>"."Упаковка: ".$packing."<br>"."Телефон: ".$telOrder."<br>"."ФИО :".$nameOrder."<br>".$emailOrder."<br>"."Оплата: ".$payment."<br>"."Доставка: ".$delivery;
-$picture  = $file;
-$picture2 = $file1;
-$picture3 = $file2;
+$picture  = $file_main_img;
+$picture2 = $file_down_img;
+$picture3 = $file_pack_img;
 //$files = array($picture, $picture2);
 
 // var_dump($files);
@@ -74,7 +75,7 @@ $picture3 = $file2;
 // echo $picture, $picture2;
 
 
-function send_mail($to, $thm, $html, $path, $path2, $path3)
+function send_mail($to, $thm, $html, $path_main_img, $path_down_img, $path_pack_img)
 
 	{
 		$boundary = "--".md5(uniqid(time())); // генерируем разделитель
@@ -91,8 +92,12 @@ function send_mail($to, $thm, $html, $path, $path2, $path3)
 		$body .= "--$boundary\n";
 
 		//echo $body;
+		if($path_down_img == '') {
+			$attachments = array($path_main_img, $path_down_img, $path_pack_img);
+		} else {
+			$attachments = array($path_main_img, $path_pack_img);
+		}
 
-		$attachments = array($path, $path2, $path3);
 
 
 		// var_dump($attachments);
